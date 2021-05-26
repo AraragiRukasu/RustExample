@@ -15,15 +15,15 @@ fn main() {
 }
 
 fn process(element_quantity: u32, positions: usize){
-    let mut array:Vec<u32> = (0..element_quantity).collect();
+    let array:Vec<u32> = (0..element_quantity).collect();
     
     let mut sw = Stopwatch::start_new();
-    rotate_array_left(&mut array, positions);
+    let result = rotate_array_left(&array, positions);
     sw.stop();
 
     println!("Elapsed: {:?}", sw.elapsed());
 
-    print_array(&array);
+    print_array(&result);
 }
 
 
